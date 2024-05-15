@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP-PDO Installation</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div>
+    <form action="install.php" method="post">
+        <label for="db_serwer">db_serwer:</label><br>
+        <input type="text" id="db_serwer" name="db_serwer"><br>
+        <label for="db_name">db_name:</label><br>
+        <input type="text" id="db_name" name="db_name"><br>
+        <label for="db_user">db_user:</label><br>
+        <input type="text" id="db_user" name="db_user"><br>
+        <label for="db_pass">db_pass:</label><br>
+        <input type="password" id="db_pass" name="db_pass"><br>
+        <a>Use Localhost?</a>
+        <label for="localhost" class="switch">
+          <input type="checkbox" id="localhost" name="localhost">
+          <span class="slider round"></span>
+        </label>
+        <label for="db_type">Database Type:</label><br>
+        <select id="db_type" name="db_type">
+          <option value="mysql">MySQL</option>
+          <option value="mssql">MSSQL</option>
+        </select><br>
+        <input type="submit" value="Install">
+    </form>
+    <div id="error" style="display:none;color:red;">
+      <p>Error: Please fill in all required fields.</p>
+    </div>
+  </div>
+  <script>
+  // Select the checkbox and the fields to be disabled
+  const localhostCheckbox = document.getElementById('localhost');
+  const fieldsToDisable = document.querySelectorAll('#db_serwer, #db_name, #db_user, #db_pass');
+
+  // Add an event listener to the checkbox
+  localhostCheckbox.addEventListener('change', () => {
+    // Disable or enable the fields based on the checkbox's checked state
+    fieldsToDisable.forEach(field => {
+      field.disabled = localhostCheckbox.checked;
+    });
+  });
+
+  // Initialize the fields to be disabled if the checkbox is already checked
+  if (localhostCheckbox.checked) {
+    fieldsToDisable.forEach(field => {
+      field.disabled = true;
+    });
+  }
+  </script>
+</body>
+</html>
