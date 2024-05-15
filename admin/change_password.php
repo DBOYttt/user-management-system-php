@@ -10,7 +10,6 @@ include('include/header.php');
 ?>
 <title>pdoadmin</title>
 <link rel="stylesheet" href="css/style.css">
-<?php include('include/container.php');?>
 <div class="container contact">	
 	<h2>pdo_admin</h2>	
 	<?php include 'menus.php'; ?>
