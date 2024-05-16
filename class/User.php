@@ -1,6 +1,8 @@
 <?php
-session_start();
-require('config.php');
+if (!isset($_SESSION)) {
+	session_start();
+}
+require_once('config.php');
 
 class User extends Dbconfig {	
     protected $hostName;
@@ -252,6 +254,22 @@ class User extends Dbconfig {
 			"data"    			=> 	$userData
 		);
 		echo json_encode($output);
+	}
+
+	public function sendMessage($message) {
+		$userId = $_SESSION['userid'];
+		$sqlQuery = "INSERT INTO chat (user_id, message) VALUES ('$userId', '$message')";
+		mysqli_query($this->dbConnect, $sqlQuery);
+	}
+
+	public function getChatMessages() {
+		$sqlQuery = "SELECT chat.message, chat.timestamp, user.first_name, user.last_name 
+		FROM chat 
+		JOIN user ON chat.user_id = user.id 
+		ORDER BY chat.timestamp DESC";
+		$result = mysqli_query($this->dbConnect, $sqlQuery);
+		$messages = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		return $messages;
 	}
 
 	public function deleteUser(){

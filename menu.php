@@ -21,3 +21,4 @@
         </div>
     </div>    
 </div>
+<?php include('chat.php');?>

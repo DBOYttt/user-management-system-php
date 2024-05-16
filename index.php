@@ -9,7 +9,6 @@ include('include/header.php');
 	<h2>PdoAdmin</h2>	
 	<?php include('menu.php');?>
 	<div class="table-responsive">	
-	You're welcome!
 	</div>
 </div>	
 <?php include('include/footer.php');?>
