@@ -1,3 +1,41 @@
+<head>
+    <style>
+        .container {
+            width: 60%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        #chat-box {
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow-y: scroll;
+        }
+
+        #message {
+            width: 80%;
+            padding: 10px;
+        }
+
+        [name="send"] {
+            width: 15%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        [name="send"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
 <?php
 
 if (!isset($_SESSION['userid'])) {
