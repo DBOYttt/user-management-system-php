@@ -1,3 +1,14 @@
+<?php
+/**
+ * Plik account.php jest odpowiedzialny za wyświetlanie szczegółów konta użytkownika.
+ *
+ * Plik ten zawiera kod PHP, który pobiera szczegóły konta użytkownika za pomocą klasy User,
+ * a następnie wyświetla te szczegóły w tabeli na stronie. Użytkownik ma również możliwość
+ * edycji swojego konta, klikając na odpowiedni link.
+ *
+ * @package UserManagementSystem
+ */
+?>
 <?php 
 include('class/User.php');
 $user = new User();

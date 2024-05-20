@@ -1,4 +1,8 @@
 <?php
+/**
+ * Plik get_messages.php odpowiedzialny jest za pobieranie i wyświetlanie wiadomości czatu.
+ */
+
 include('class/User.php');
 $user = new User();
 

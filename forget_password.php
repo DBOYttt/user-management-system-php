@@ -1,12 +1,24 @@
+<?php
+/**
+ * Plik forget_password.php jest odpowiedzialny za obsługę formularza do resetowania hasła.
+ * W tym pliku znajduje się formularz, który umożliwia użytkownikowi wpisanie swojego adresu e-mail,
+ * a następnie wysłanie żądania resetowania hasła do serwera.
+ * Jeśli wystąpi błąd podczas resetowania hasła, zostanie wyświetlony komunikat o błędzie.
+ * Plik ten korzysta z klasy User, która jest odpowiedzialna za logikę resetowania hasła.
+ */
+?>
 <?php 
 include('class/User.php');
 $user = new User();
 $errorMessage = '';
+
 if(!empty($_POST['forgetpassword']) && $_POST['forgetpassword']) {
 	$errorMessage =  $user->resetPassword();
 }
+
 include('include/header.php');
 ?>
+
 <title>pdo-admin</title>
 <div class="container contact">	
 	<h2>pdo-admin</h2>	

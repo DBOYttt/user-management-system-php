@@ -1,11 +1,43 @@
-<?php 
+<?php
+/**
+ * Plik: /d:/xampp/htdocs/user-management-system-php/edit_account.php
+ * 
+ * Opis: Strona umożliwiająca edycję danych konta użytkownika.
+ * 
+ * @package UserManagementSystem
+ */
+
+/**
+ * Klasa User
+ * 
+ * Klasa reprezentująca użytkownika.
+ * 
+ * @package UserManagementSystem
+ */
 include('class/User.php');
 $user = new User();
 $user->loginStatus();
 $message = '';
+
+/**
+ * Aktualizacja danych konta
+ * 
+ * Jeśli formularz został wysłany i pole "update" ma wartość true,
+ * wywoływana jest metoda editAccount() klasy User w celu aktualizacji danych konta.
+ * 
+ * @return string Komunikat o sukcesie lub błędzie aktualizacji danych konta.
+ */
 if(!empty($_POST["update"]) && $_POST["update"]) {
 	$message = $user->editAccount();
 }
+
+/**
+ * Szczegóły użytkownika
+ * 
+ * Pobieranie szczegółowych informacji o zalogowanym użytkowniku.
+ * 
+ * @return array Tablica zawierająca szczegóły użytkownika.
+ */
 $userDetail = $user->userDetails();
 include('include/header.php');
 ?>

@@ -1,4 +1,13 @@
 <?php 
+/**
+ * Plik login.php jest odpowiedzialny za obsługę logowania użytkownika.
+ * Zawiera formularz logowania oraz logikę logowania użytkownika.
+ * Wykorzystuje klasę User do przetwarzania danych logowania.
+ *
+ * 
+ */
+
+
 include('class/User.php');
 $user = new User();
 $errorMessage =  $user->login();

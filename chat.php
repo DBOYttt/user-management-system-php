@@ -1,3 +1,8 @@
+<?php
+/**
+ * Plik chat.php jest odpowiedzialny za wyświetlanie interfejsu czatu oraz obsługę komunikacji między użytkownikami.
+ */
+?>
 <head>
     <style>
         .container {
@@ -58,20 +63,23 @@ include('include/header.php');
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+    /**
+     * Funkcja loadMessages() pobiera wiadomości z serwera i wyświetla je w elemencie o id "chat-box".
+     */
     function loadMessages(){
         $.get('get_messages.php', function(data){
             $('#chat-box').html(data);
         });
     }
 
-    loadMessages(); // Load messages on page load
+    loadMessages(); // Ładuje wiadomości przy załadowaniu strony
 
-    // Reload messages every 1 second
+    // Odświeża wiadomości co 1 sekundę
     setInterval(function(){
         loadMessages();
     }, 1000);
 
-    // Send new message
+    // Wysyła nową wiadomość
     $('#chat-form').on('submit', function(e){
         e.preventDefault();
         var message = $('#message').val();

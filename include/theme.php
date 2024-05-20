@@ -1,4 +1,15 @@
 <?php
+/**
+ * Plik zawiera kod HTML i JavaScript odpowiedzialny za funkcjonalność przełączania motywu.
+ * Przełącznik motywu umożliwia użytkownikowi przełączanie między jasnym a ciemnym motywem
+ * poprzez zmianę właściwości CSS filtru.
+ *
+ * @package UserManagementSystem
+ */
+
+// Kod HTML i JavaScript odpowiedzialny za funkcjonalność przełączania motywu
+?>
+<?php
 echo '
 <!DOCTYPE html>
 <html>

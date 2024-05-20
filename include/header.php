@@ -1,3 +1,15 @@
+<?php
+/**
+ * Plik nagłówkowy zawierający deklarację struktury strony.
+ *
+ * Plik nagłówkowy zawiera deklarację struktury strony, w tym deklarację metadanych,
+ * stylów CSS i skryptów JavaScript. Wykorzystuje bibliotekę Bootstrap do stylizacji
+ * i interakcji.
+ *
+ * @package UserManagementSystem
+ * @subpackage Include
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>

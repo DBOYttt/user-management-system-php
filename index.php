@@ -1,4 +1,9 @@
-<?php 
+<?php
+/**
+ * Plik index.php jest głównym plikiem aplikacji User Management System PHP.
+ * Zawiera on kod odpowiedzialny za logikę logowania użytkownika, wyświetlanie nagłówka, treści strony oraz stopki.
+ */
+ 
 include('class/User.php');
 $user = new User();
 $user->loginStatus();
