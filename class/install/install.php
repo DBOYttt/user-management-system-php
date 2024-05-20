@@ -7,9 +7,10 @@
  *
  * @package UserManagementSystem
  * @subpackage Install
+ * 
  */
 
-// FILEPATH: /d:/xampp/htdocs/user-management-system-php/class/install/install.php
+// FILEPATH: /xampp/htdocs/user-management-system-php/class/install/install.php
 
 // Ustaw raportowanie błędów
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
