@@ -70,3 +70,8 @@ If you would like to contribute to this project, please fork the repository and 
   - User presence indicators (online/offline status).
   - Message history and storage.
   - Notifications for new messages.
+##  DEMO
+
+
+https://github.com/user-attachments/assets/b7faeefd-7642-4486-8b87-3bab240524c8
+
